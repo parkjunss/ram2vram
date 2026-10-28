@@ -1,0 +1,59 @@
+# Local application state and private data
+/.strata-ram2vram/
+/.local-backups/
+/local-tools/
+/duplicate-results/
+/docs/
+/tests/
+/strata-integration/
+
+# Models, external engines and build products
+/models/
+/llama.cpp/
+/llama.cpp-stock/
+/llama.cpp-moe-cache/
+/llama.cpp-hybrid-cache/
+build/
+build-*/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.exe
+*.dll
+*.lib
+*.exp
+*.obj
+*.pdb
+*.gguf
+*.safetensors
+*.part
+
+# Historical experiments retained locally
+/gpt_oss_*/
+/granite_reference_chat/
+/llama_ram2vram_*/
+/*_logs/
+/gpt_oss_expert_sizes.json
+/pcie_aware_moe_expert_cache_research_report.md
+/ram2vram_llm_streaming_progress_2026-09-16.md
+/duplicates.csv
+/duplicates.txt
+/moe_expert_trace*.csv
+/llama_help.txt
+/test.md
+
+# Keep only the representative benchmark
+/benchmark/*
+!/benchmark/CMakeLists.txt
+!/benchmark/ram_to_vram_bench.cu
+
+# Credentials and editor state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite3*
+.vs/
+.idea/
