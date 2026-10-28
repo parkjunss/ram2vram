@@ -1,0 +1,659 @@
+{
+    "n_layers_found":  36,
+    "experts_per_layer":  128,
+    "avg_expert_bundle_bytes":  13219200.0,
+    "min_expert_bundle_bytes":  13219200.0,
+    "max_expert_bundle_bytes":  13219200.0,
+    "total_expert_tensor_bytes":  60914073600,
+    "layers":  {
+                   "0":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.0.ffn_down_exps.weight",
+                                                  "gate":  "blk.0.ffn_gate_exps.weight",
+                                                  "up":  "blk.0.ffn_up_exps.weight"
+                                              }
+                         },
+                   "1":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.1.ffn_down_exps.weight",
+                                                  "gate":  "blk.1.ffn_gate_exps.weight",
+                                                  "up":  "blk.1.ffn_up_exps.weight"
+                                              }
+                         },
+                   "2":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.2.ffn_down_exps.weight",
+                                                  "gate":  "blk.2.ffn_gate_exps.weight",
+                                                  "up":  "blk.2.ffn_up_exps.weight"
+                                              }
+                         },
+                   "3":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.3.ffn_down_exps.weight",
+                                                  "gate":  "blk.3.ffn_gate_exps.weight",
+                                                  "up":  "blk.3.ffn_up_exps.weight"
+                                              }
+                         },
+                   "4":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.4.ffn_down_exps.weight",
+                                                  "gate":  "blk.4.ffn_gate_exps.weight",
+                                                  "up":  "blk.4.ffn_up_exps.weight"
+                                              }
+                         },
+                   "5":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.5.ffn_down_exps.weight",
+                                                  "gate":  "blk.5.ffn_gate_exps.weight",
+                                                  "up":  "blk.5.ffn_up_exps.weight"
+                                              }
+                         },
+                   "6":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.6.ffn_down_exps.weight",
+                                                  "gate":  "blk.6.ffn_gate_exps.weight",
+                                                  "up":  "blk.6.ffn_up_exps.weight"
+                                              }
+                         },
+                   "7":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.7.ffn_down_exps.weight",
+                                                  "gate":  "blk.7.ffn_gate_exps.weight",
+                                                  "up":  "blk.7.ffn_up_exps.weight"
+                                              }
+                         },
+                   "8":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.8.ffn_down_exps.weight",
+                                                  "gate":  "blk.8.ffn_gate_exps.weight",
+                                                  "up":  "blk.8.ffn_up_exps.weight"
+                                              }
+                         },
+                   "9":  {
+                             "experts":  128,
+                             "gate_tensor_bytes":  564019200,
+                             "up_tensor_bytes":  564019200,
+                             "down_tensor_bytes":  564019200,
+                             "all_expert_tensors_bytes":  1692057600,
+                             "expert_bundle_bytes":  13219200.0,
+                             "parts_present":  [
+                                                   "down",
+                                                   "gate",
+                                                   "up"
+                                               ],
+                             "tensor_names":  {
+                                                  "down":  "blk.9.ffn_down_exps.weight",
+                                                  "gate":  "blk.9.ffn_gate_exps.weight",
+                                                  "up":  "blk.9.ffn_up_exps.weight"
+                                              }
+                         },
+                   "10":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.10.ffn_down_exps.weight",
+                                                   "gate":  "blk.10.ffn_gate_exps.weight",
+                                                   "up":  "blk.10.ffn_up_exps.weight"
+                                               }
+                          },
+                   "11":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.11.ffn_down_exps.weight",
+                                                   "gate":  "blk.11.ffn_gate_exps.weight",
+                                                   "up":  "blk.11.ffn_up_exps.weight"
+                                               }
+                          },
+                   "12":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.12.ffn_down_exps.weight",
+                                                   "gate":  "blk.12.ffn_gate_exps.weight",
+                                                   "up":  "blk.12.ffn_up_exps.weight"
+                                               }
+                          },
+                   "13":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.13.ffn_down_exps.weight",
+                                                   "gate":  "blk.13.ffn_gate_exps.weight",
+                                                   "up":  "blk.13.ffn_up_exps.weight"
+                                               }
+                          },
+                   "14":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.14.ffn_down_exps.weight",
+                                                   "gate":  "blk.14.ffn_gate_exps.weight",
+                                                   "up":  "blk.14.ffn_up_exps.weight"
+                                               }
+                          },
+                   "15":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.15.ffn_down_exps.weight",
+                                                   "gate":  "blk.15.ffn_gate_exps.weight",
+                                                   "up":  "blk.15.ffn_up_exps.weight"
+                                               }
+                          },
+                   "16":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.16.ffn_down_exps.weight",
+                                                   "gate":  "blk.16.ffn_gate_exps.weight",
+                                                   "up":  "blk.16.ffn_up_exps.weight"
+                                               }
+                          },
+                   "17":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.17.ffn_down_exps.weight",
+                                                   "gate":  "blk.17.ffn_gate_exps.weight",
+                                                   "up":  "blk.17.ffn_up_exps.weight"
+                                               }
+                          },
+                   "18":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.18.ffn_down_exps.weight",
+                                                   "gate":  "blk.18.ffn_gate_exps.weight",
+                                                   "up":  "blk.18.ffn_up_exps.weight"
+                                               }
+                          },
+                   "19":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.19.ffn_down_exps.weight",
+                                                   "gate":  "blk.19.ffn_gate_exps.weight",
+                                                   "up":  "blk.19.ffn_up_exps.weight"
+                                               }
+                          },
+                   "20":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.20.ffn_down_exps.weight",
+                                                   "gate":  "blk.20.ffn_gate_exps.weight",
+                                                   "up":  "blk.20.ffn_up_exps.weight"
+                                               }
+                          },
+                   "21":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.21.ffn_down_exps.weight",
+                                                   "gate":  "blk.21.ffn_gate_exps.weight",
+                                                   "up":  "blk.21.ffn_up_exps.weight"
+                                               }
+                          },
+                   "22":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.22.ffn_down_exps.weight",
+                                                   "gate":  "blk.22.ffn_gate_exps.weight",
+                                                   "up":  "blk.22.ffn_up_exps.weight"
+                                               }
+                          },
+                   "23":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.23.ffn_down_exps.weight",
+                                                   "gate":  "blk.23.ffn_gate_exps.weight",
+                                                   "up":  "blk.23.ffn_up_exps.weight"
+                                               }
+                          },
+                   "24":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.24.ffn_down_exps.weight",
+                                                   "gate":  "blk.24.ffn_gate_exps.weight",
+                                                   "up":  "blk.24.ffn_up_exps.weight"
+                                               }
+                          },
+                   "25":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.25.ffn_down_exps.weight",
+                                                   "gate":  "blk.25.ffn_gate_exps.weight",
+                                                   "up":  "blk.25.ffn_up_exps.weight"
+                                               }
+                          },
+                   "26":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.26.ffn_down_exps.weight",
+                                                   "gate":  "blk.26.ffn_gate_exps.weight",
+                                                   "up":  "blk.26.ffn_up_exps.weight"
+                                               }
+                          },
+                   "27":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.27.ffn_down_exps.weight",
+                                                   "gate":  "blk.27.ffn_gate_exps.weight",
+                                                   "up":  "blk.27.ffn_up_exps.weight"
+                                               }
+                          },
+                   "28":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.28.ffn_down_exps.weight",
+                                                   "gate":  "blk.28.ffn_gate_exps.weight",
+                                                   "up":  "blk.28.ffn_up_exps.weight"
+                                               }
+                          },
+                   "29":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.29.ffn_down_exps.weight",
+                                                   "gate":  "blk.29.ffn_gate_exps.weight",
+                                                   "up":  "blk.29.ffn_up_exps.weight"
+                                               }
+                          },
+                   "30":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.30.ffn_down_exps.weight",
+                                                   "gate":  "blk.30.ffn_gate_exps.weight",
+                                                   "up":  "blk.30.ffn_up_exps.weight"
+                                               }
+                          },
+                   "31":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.31.ffn_down_exps.weight",
+                                                   "gate":  "blk.31.ffn_gate_exps.weight",
+                                                   "up":  "blk.31.ffn_up_exps.weight"
+                                               }
+                          },
+                   "32":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.32.ffn_down_exps.weight",
+                                                   "gate":  "blk.32.ffn_gate_exps.weight",
+                                                   "up":  "blk.32.ffn_up_exps.weight"
+                                               }
+                          },
+                   "33":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.33.ffn_down_exps.weight",
+                                                   "gate":  "blk.33.ffn_gate_exps.weight",
+                                                   "up":  "blk.33.ffn_up_exps.weight"
+                                               }
+                          },
+                   "34":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.34.ffn_down_exps.weight",
+                                                   "gate":  "blk.34.ffn_gate_exps.weight",
+                                                   "up":  "blk.34.ffn_up_exps.weight"
+                                               }
+                          },
+                   "35":  {
+                              "experts":  128,
+                              "gate_tensor_bytes":  564019200,
+                              "up_tensor_bytes":  564019200,
+                              "down_tensor_bytes":  564019200,
+                              "all_expert_tensors_bytes":  1692057600,
+                              "expert_bundle_bytes":  13219200.0,
+                              "parts_present":  [
+                                                    "down",
+                                                    "gate",
+                                                    "up"
+                                                ],
+                              "tensor_names":  {
+                                                   "down":  "blk.35.ffn_down_exps.weight",
+                                                   "gate":  "blk.35.ffn_gate_exps.weight",
+                                                   "up":  "blk.35.ffn_up_exps.weight"
+                                               }
+                          }
+               },
+    "note":  "Sizes use on-disk tensor spans and can include tiny GGUF alignment padding."
+}

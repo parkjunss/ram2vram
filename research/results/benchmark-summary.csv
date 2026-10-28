@@ -1,0 +1,11 @@
+experiment,model,variant,cache_setting,generation_tok_s,cache_hit_pct,fill_fail,dispatch_fail,collect_fail,evidence
+persistent-slot,gpt-oss-120b,cache-off,0 expert slots,8.2,,,,,moe_cache_logs/mec_0.txt
+persistent-slot,gpt-oss-120b,slot-remap,8 expert slots,3.3,,,,,research report section 30
+persistent-slot,gpt-oss-120b,slot-remap,12 expert slots,3.2,,,,,research report section 30
+persistent-slot,gpt-oss-120b,slot-remap,16 expert slots,3.1,,,,,research report section 30
+hybrid-cache,gpt-oss-120b,cache-off,0 MiB,6.6,,,,,hybrid_moe_cache_logs/hybrid_off.txt
+hybrid-cache,gpt-oss-120b,cache-on,8192 MiB,7.5,,,,,hybrid_moe_cache_logs/hybrid_8192.txt
+moe-cache,Qwen3.5-35B-A3B,cache-off,0 MiB,27.27,,,,,qwen35_cache_logs/off.txt
+moe-cache,Qwen3.5-35B-A3B,cache-on,8192 MiB,28.72,74.9,0,0,0,qwen35_cache_logs/8192.txt
+moe-cache,Qwen3.6-35B-A3B,cache-off,0 MiB,26.63,,,,,qwen36_cache_logs/off.txt
+moe-cache,Qwen3.6-35B-A3B,cache-on,8192 MiB,27.49,71.9,0,0,0,qwen36_cache_logs/8192.txt

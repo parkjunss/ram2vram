@@ -3,7 +3,6 @@
 /.local-backups/
 /local-tools/
 /duplicate-results/
-/docs/
 /tests/
 /strata-integration/
 
@@ -57,3 +56,12 @@ __pycache__/
 *.sqlite3*
 .vs/
 .idea/
+docs_old/duplicate_scan.py
+docs_old/duplicate-scan.md
+docs_old/find_duplicates.py
+docs_old/github-release.md
+docs_old/pcie_llm_memory_streaming_idea.md
+docs_old/qwen35.md
+docs_old/qwen36.md
+docs_old/show_duplicates.py
+docs_old/strata.md
