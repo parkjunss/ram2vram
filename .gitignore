@@ -7,6 +7,9 @@
 /strata-integration/
 
 # Models, external engines and build products
+/desktop/strata/
+/.ram2vram-desktop/
+/desktop/dist/
 /models/
 /llama.cpp/
 /llama.cpp-stock/
