@@ -1,0 +1,29 @@
+body{grid-template-rows:minmax(0,1fr);height:100dvh}
+main{min-height:0;overflow:hidden}
+#conversation{min-height:0;overscroll-behavior:contain;overflow-anchor:none}
+#settings-dialog{max-height:85dvh;overflow:auto;width:min(560px,90vw)}
+#settings-form label{display:block;margin:12px 0}
+#settings-form input:not([type=checkbox]),#settings-form textarea{display:block;width:100%;background:#191c19;color:inherit;border:1px solid #525e4b;border-radius:5px;padding:8px}
+#settings-form p{font-size:12px;line-height:1.6}
+#generation-settings{margin-top:8px}
+#context-dialog,#skills-dialog{max-height:88dvh;overflow:auto;width:min(720px,94vw)}
+#context-dialog p,#skills-dialog p{font-size:12px;line-height:1.65;overflow-wrap:anywhere}
+#context-limit,#skill-form input:not([type=checkbox]),#skill-form textarea{display:block;width:100%;background:#191c19;color:inherit;border:1px solid #525e4b;border-radius:5px;padding:8px;margin:8px 0 14px}
+#skill-form label{display:block;margin-top:12px}
+.skill-row{padding:16px 0;border-bottom:1px solid #3b4539}
+.skill-actions{display:flex;gap:8px;flex-wrap:wrap}
+.skill-actions button,.file-button,#skill-new{background:#293024;border-radius:5px;padding:8px;color:inherit;font-size:12px;cursor:pointer}
+.file-button input{display:block;max-width:200px;font-size:10px;margin-top:6px}
+#context-settings,#compact-now,#skills-open{margin-top:8px}
+#context-policy{font-size:11px;line-height:1.6}
+#context-bar{display:block;height:100%;background:#bdd1a7;width:0}
+.meter-track{height:4px;background:#30392c;border-radius:3px;overflow:hidden}
+#context-form input:disabled{opacity:.5}
+#skills-error,#context-error{color:#e7b488}
+.used-skills{font-size:11px;color:#bdd1a7;margin-top:14px}
+.history-actions{display:flex;gap:12px;flex-wrap:wrap;padding:14px 0}
+.mode-hint{font-size:10px;line-height:1.6;color:#a9b79e;margin:8px 0 0}
+.mode-hint[data-automatic=true]{color:#edbc96}
+.turn-mode{display:block;color:#9bb38a;font-size:10px;margin-top:8px}
+.agent-card{padding:12px;border:1px solid #526244;background:#202b1b;border-radius:8px;margin:10px 0;font-size:11px}
+.agent-state{float:right;color:#c4d9af}.agent-card p{margin:8px 0 0;white-space:pre-wrap}

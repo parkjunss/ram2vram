@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>RAM2VRAM Workspace</title>
+  <link rel="stylesheet" href="./workspace.css?v=20261029-vision1">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./index.html" aria-label="RAM2VRAM Workspace"><span class="mark">R<span>↗</span></span><span>RAM2VRAM<small>YOUR LOCAL WORKSPACE</small></span></a>
+    <button id="new-chat" class="new-chat"><span>＋</span> 새 작업 <kbd>Ctrl N</kbd></button>
+    <div class="section-label">작업 기록 <span id="session-count">0</span></div>
+    <nav id="sessions" aria-label="작업 기록"></nav>
+    <div class="sidebar-bottom"><span class="privacy-dot"></span> 추론은 내 컴퓨터에서<small>웹 검색을 사용할 때만 검색어를 전송합니다.</small><a href="/" target="_blank" rel="noopener">Strata 화면 열기 ↗</a></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><span class="eyebrow">WORKSPACE /</span><span id="chat-title">새 작업</span></div><div class="connection"><span id="connection-dot" class="dot"></span><span id="connection-text">연결 확인 중</span></div></header>
+    <div id="banner" role="alert" hidden></div>
+    <section id="conversation" aria-label="대화">
+      <div id="welcome" class="welcome"><div class="welcome-label"><span class="small-mark">↗</span> 생각에서, 실행으로.</div><h1>무엇을 함께<br><em>만들까요?</em></h1><p>파일을 살펴보고, 자료를 찾고, 코드를 실행하세요.<br>필요한 도구는 모델이 선택하고, 변경은 내가 승인합니다.</p><div class="suggestions"><button data-prompt="현재 작업 폴더의 파일 목록을 읽고 프로젝트 구조를 간단히 설명해줘. 파일은 수정하지 마."><span>⌘</span><b>프로젝트 살펴보기</b><small>작업 폴더의 구조 이해하기 ↗</small></button><button data-prompt="웹에서 Python pathlib 공식 문서를 검색하고 주요 기능과 출처 링크를 알려줘."><span>◎</span><b>웹에서 자료 찾기</b><small>출처가 있는 답변 받기 ↗</small></button><button data-prompt="현재 작업 폴더에서 git status와 diff를 읽고 변경 내용을 검토해줘. 파일은 수정하거나 커밋하지 마."><span>≋</span><b>변경 내용 검토하기</b><small>수정하기 전에 함께 확인하기 ↗</small></button></div></div>
+      <div id="messages" role="log" aria-label="메시지"></div>
+    </section>
+    <div class="composer-area"><div class="run-status" id="run-status" role="status" aria-live="polite">준비 중</div><form id="composer"><textarea id="prompt" rows="3" placeholder="작업을 설명하세요. Shift + Enter로 줄바꿈" aria-label="메시지"></textarea><div class="composer-bottom"><div class="composer-options"><select id="mode" aria-label="실행 모드"><option value="manual">◈ 승인 후 실행</option><option value="plan">◇ 읽기 전용</option></select><span id="composer-model">모델 확인 중</span></div><button id="stop" type="button" hidden>■ 중지</button><button id="send" type="submit" aria-label="메시지 보내기" disabled>보내기 <span>↑</span></button></div></form><p class="composer-note">답변은 틀릴 수 있습니다. 중요한 변경과 검색 출처를 확인하세요.</p></div>
+  </main>
+  <aside class="inspector">
+    <div class="inspector-heading"><span>작업 컨텍스트</span><span class="eyebrow">LIVE</span></div>
+    <section class="context-section"><div class="section-title"><h2>작업 폴더</h2><button id="choose-folder" class="text-button">변경 ↗</button></div><div class="folder-icon">▱</div><strong id="folder-name">폴더 확인 중</strong><p id="folder-path" class="path"></p><small class="muted">모델이 도구를 실행할 기준 위치입니다.</small></section>
+    <section class="context-section"><div class="section-title"><h2>로컬 모델</h2><span id="model-badge" class="badge">확인 중</span></div><select id="model-select" aria-label="설치된 모델"></select><p class="model-description">RAM의 expert를 필요한 순간 GPU로.</p><button id="load-model" class="secondary-button" disabled>모델 로드</button><div class="meter-row"><span>시스템 RAM</span><strong id="ram-value">—</strong></div><div class="meter"><i id="ram-bar"></i></div><div class="meter-row"><span>GPU VRAM</span><strong id="vram-value">—</strong></div><div class="meter accent"><i id="vram-bar"></i></div><div class="mini-stats"><div><strong id="cache-value">—</strong><span>expert 캐시</span></div><div><strong id="speed-value">—</strong><span>최근 생성 tok/s</span></div></div></section>
+    <section class="context-section activity-section"><div class="section-title"><h2>도구 활동</h2><span id="tool-count" class="muted">0</span></div><div id="activity"><p class="empty-activity">도구를 사용하면 여기에<br>실행 과정이 표시됩니다.</p></div></section>
+    <footer class="inspector-footer"><span class="dot green"></span> RAM2VRAM engine<span>Powered by Strata</span></footer>
+  </aside>
+  <dialog id="folder-dialog"><form id="folder-form"><div class="section-title"><h2>작업 폴더 변경</h2><button id="cancel-folder" type="button" class="text-button" aria-label="폴더 변경 취소">✕</button></div><p>이 대화에서 도구가 사용할 폴더의 전체 경로를 입력하세요.</p><label for="folder-input">폴더 경로</label><input id="folder-input" required placeholder="F:\Projects\my-project"><p class="muted">작업 폴더 선택은 운영체제의 접근 권한을 제한하지 않습니다.</p><button class="primary-button" type="submit">이 폴더 사용</button><p id="folder-error" role="alert"></p></form></dialog>
+ <dialog id="settings-dialog"><form id="settings-form">
+ <div class="section-title"><h2>모델 응답 설정</h2><button type="button" id="settings-close">닫기</button></div>
+ <p>저장하면 이 서버의 로컬 에이전트 대화에 공통 적용됩니다. 진행 중인 응답은 끝낸 뒤 변경하세요.</p>
+ <label><input type="checkbox" id="setting-korean"> 한국어 응답 우선 (코드·고유명사 유지)</label>
+ <label>Temperature (0~2)<input id="setting-temperature" type="number" min="0" max="2" step="0.01" required></label>
+ <label>Top P (0.001~1)<input id="setting-top_p" type="number" min="0.001" max="1" step="0.001" required></label>
+ <label>Top K (1~64)<input id="setting-top_k" type="number" min="1" max="64" step="1" required></label>
+ <label>최대 출력 토큰 (1~32768)<input id="setting-max_tokens" type="number" min="1" max="32768" step="1" required></label>
+ <label>Logit Bias — 토큰 ID별 JSON<textarea id="setting-logit_bias" rows="4" spellcheck="false" placeholder='{"123": -5}'></textarea></label>
+ <p>빈 객체 {}는 사용 안 함입니다. 값은 -100~100이며 토큰 ID는 모델마다 다릅니다. 외국어 전체 차단을 보장하지 않습니다. 미지원 엔진은 요청 오류를 반환하므로 기본값 {}부터 사용하세요.</p>
+ <button type="button" id="settings-reset">권장값 복원</button> <button type="submit" class="primary-button">저장</button><p id="settings-error" role="alert"></p>
+ </form></dialog>
+ <link rel="stylesheet" href="./workspace-settings.css?v=20261029-vision1">
+ <script type="module" src="./workspace.js?v=20261029-vision1"></script>
+</body>
+</html>
