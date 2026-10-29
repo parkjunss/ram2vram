@@ -1,0 +1,5 @@
+{
+  "productName": "RAM2VRAM Workspace",
+  "identifier": "local.ram2vram.workspace",
+  "bundle": { "shortDescription": "Your local model and tools, in one workspace." }
+}

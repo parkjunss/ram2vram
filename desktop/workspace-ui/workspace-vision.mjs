@@ -1,0 +1,17 @@
+export function installVision({api,state,notify,onJob}) {
+  const box=document.createElement('div');box.innerHTML=`<label for="vision-mode">이미지 입력</label><select id="vision-mode"><option value="no">끄기</option><option value="cpu">켜기 · CPU 인코더</option><option value="gpu">켜기 · GPU 인코더</option></select><button type="button" id="vision-apply" class="secondary-button">이미지 설정 적용 · 모델 재로드</button><p id="vision-status" class="muted"></p>`;
+  document.getElementById('load-model').after(box);const $=id=>document.getElementById(id);let last='';
+  $('vision-apply').onclick=async()=>{try{const s=state();if(s.busy||s.job)return;const result=await api('/api/native/operations',{kind:'load',args:{model:s.model,vision:$('vision-mode').value,values:{parallel:1}}});onJob(result.id);}catch(e){notify(e.message);}};
+  return {update(){const s=state(),entry=s.native?.installed?.models?.find(m=>m.model===s.model);const key=JSON.stringify([s.model,entry?.visionEnabled,entry?.visionDevice]);if(key!==last){$('vision-mode').value=entry?.visionEnabled===false?'no':entry?.visionDevice??(s.ready?.vision?'cpu':'no');last=key;}$('vision-apply').disabled=s.busy||!!s.job||!entry;$('vision-mode').disabled=s.busy||!!s.job;$('vision-status').textContent=s.ready?.vision?'이미지 입력 활성 · 스크린샷과 첨부 이미지 사용 가능':entry?.visionPrepared?'비전 파일 준비됨 · 설정 적용 후 사용 가능':'비전 파일 준비 필요';}};
+}
+
+export function installImageInput({state,notify}) {
+  const label=document.createElement('label');label.className='file-button';label.textContent='이미지 첨부';
+  const input=document.createElement('input');input.id='chat-images';input.type='file';input.accept='image/png,image/jpeg,image/webp';input.multiple=true;label.append(input);
+  const preview=document.createElement('div');preview.id='image-draft';
+  document.querySelector('.composer-options').append(label);document.getElementById('prompt').after(preview);
+  let images=[],owner=null,loading=false;
+  const render=()=>{preview.replaceChildren();for(const img of images){const row=document.createElement('span'),name=document.createElement('span'),remove=document.createElement('button');name.textContent=img.name;remove.type='button';remove.textContent='삭제';remove.onclick=()=>{images=images.filter(i=>i!==img);render();};row.append(name,remove);preview.append(row);}};
+  input.onchange=async()=>{const s=state(),session=s.session;try{if(s.busy||!s.ready?.vision)throw new Error('이미지 입력을 켜고 모델을 재로드한 뒤 첨부하세요.');const files=[...input.files];if(images.length+files.length>4)throw new Error('한 번에 이미지 4개까지 첨부할 수 있습니다.');loading=true;const next=[];for(const file of files){if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>2*1024*1024)throw new Error('PNG/JPEG/WebP, 파일당 2MiB 이하를 선택하세요.');const url=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error('이미지를 읽지 못했습니다.'));r.readAsDataURL(file);});next.push({name:file.name,url});}if(state().session!==session||state().busy)throw new Error('대화가 변경되어 첨부를 취소했습니다.');images.push(...next);owner=session;render();}catch(e){notify(e.message);}finally{loading=false;input.value='';}};
+  return {update(){const s=state();input.disabled=s.busy||!s.ready?.vision;if(owner&&owner!==s.session){images=[];owner=null;render();}},take(){if(loading)throw new Error('이미지를 읽는 중입니다. 잠시 후 보내세요.');if(images.length&&!state().ready?.vision)throw new Error('현재 모델의 이미지 입력이 꺼져 있습니다.');const out=images;images=[];owner=null;render();return out;}};
+}
