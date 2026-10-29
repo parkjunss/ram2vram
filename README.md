@@ -8,6 +8,7 @@
 - [연구 코드와 재현 방법](research/README.md)
 - [36-layer trace](research/data/traces/moe_expert_trace_all.csv) · [127-step partial trace](research/data/traces/moe_expert_trace.csv)
 - [실행별 요약 CSV](research/results/benchmark-summary.csv)
+- [RAM2VRAM Desktop 앱 (Strata 기반)](desktop/README.md)
 
 ## 핵심 결과
 
@@ -35,6 +36,7 @@ Persistent slot-remap 방식은 8.2 tok/s 기준선보다 느린 3.1–3.3 tok/s
 | 경로 | 내용 |
 | --- | --- |
 | `docs/` | 연구 보고서와 과정 기록 |
+| `desktop/` | Strata 기반 Desktop 앱 패치와 Workspace UI (`docs/desktop/` 문서) |
 | `research/global-cache/` | expert 크기 추출 및 global LRU 시뮬레이션 |
 | `research/optimizer/` | VRAM budget별 cache 배치 비교 |
 | `research/probes/` | llama.cpp MoE routing 계측 도구 |
